@@ -1,0 +1,222 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+    width: 900px;
+    margin: 0 auto;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    padding: 20px;
+}
+body, * {
+    font-family: "Roboto", Tahoma, Arial;
+}
+
+#links {
+    background: #eee;
+    margin-top: 10px;
+    border: 1px solid #333;
+}
+
+#links a {
+    display: block;
+    float: left;
+    color: #098edb;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+#links a:hover {
+    text-decoration: underline;
+}
+
+#page {
+    margin-top: 10px;
+}
+
+#sidebar {
+    float: left;
+}
+
+#sidebar .block {
+    width: 200px;
+}
+
+.block {
+    background: #eee;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #333;
+    margin-top: 20px;
+}
+
+.block > h2 {
+    display: block;
+    padding: 10px;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    color: #fff;
+    background: #000;
+    margin: -10px -10px 10px -10px;
+}
+
+
+#sidebar .block ul li a {
+    color: #098edb;
+    display: block;
+    text-decoration: none;
+    margin: 0 -10px;
+    padding: 5px 10px;
+}
+
+#sidebar .block ul li a:hover {
+    text-decoration: underline;
+}
+
+#sidebar .block ul li.active a {
+    background: #000;
+    color: #fff;
+}
+
+.download a {
+    text-decoration: none;
+    color: #098edb;
+}
+
+.download .name a {
+    font-weight: bold;
+}
+
+.download a:hover {
+    text-decoration: underline;
+}
+
+.download .info {
+    font-size: 13px;
+    padding: 5px 0 0 0;
+}
+
+.download strong {
+    font-weight: bold;
+    color: #333;
+}
+
+table { width:100%;}
+
+tr td {
+    padding: 10px 0;
+    color: #000;
+}
+
+tr th {
+    padding: 10px 0;
+    font-weight: bold;
+    border-bottom: 1px solid #333;
+    color: #333;
+}
+
+.readme {
+    font-family: Sans Serif, Arial;
+    line-height: 22px;
+}
+
+.readme h1 {
+    font-size: 32px;
+}
+.readme h2 { font-size: 28px; }
+.readme h3 { font-size: 24px; }
+.readme h4 { font-size: 20px; }
+.readme h5 { font-size: 18px; }
+.readme h6 { font-size: 17px; }
+
+.readme p, .readme ul, .readme ol {
+    margin: 10px 0;
+}
+
+.readme ul {
+    list-style: square;
+    margin-left: 20px;
+}
+
+.readme li {
+    margin: 3px 0;
+}
+
+.readme ol {
+    list-style: decimal;
+    margin-left: 23px;
+}
+
+.readme a {
+    text-decoration: none;
+    color: #098edb;
+}
+
+.readme a:hover {
+    text-decoration: underline;
+}
+
+.readme code {
+    font-family: Courier;
+    font-size: 13px;
+    background: #FFF;
+    border: 1px solid #999;
+    padding: 5px;
+    display: block;
+    white-space: pre;
+    word-wrap: break-word;
+}
+
+.readme strong {
+    font-weight: bold;
+}
+.readme em {
+    font-style: italic;
+}
+
+#footer {
+    padding: 100px;
+    text-align: center;
+}
