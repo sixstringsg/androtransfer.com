@@ -74,5 +74,9 @@ if ($dc && count($dc) > 0) {
     file_put_contents($baseDir."/.last_error", "JSON failed to decode! " . json_last_error());
 }*/
 
+header("Cache-Control: public");
+header("Content-Description: File Transfer");
 header("Content-Disposition: attachment; filename=$filename");
+header("Content-Type: application/zip");
+header("Content-Transfer-Encoding: binary");
 readfile($baseDir . "/" . $path);
