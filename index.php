@@ -213,7 +213,12 @@ if ($currentDeveloper) {
 </script>
 </head>
 <body>
-<script type="text/javascript"><!--
+    <div id='header'>
+      <div id="logo"></div>
+		<div class="clear"></div>
+    </div>
+    <div id="advertise">
+    <script type="text/javascript"><!--
 google_ad_client = "ca-pub-6244853272122205";
 /* Top Bar */
 google_ad_slot = "6876020546";
@@ -224,13 +229,34 @@ google_ad_height = 90;
 <script type="text/javascript"
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
-    <div id='header'>
-        <img src='images/title.png' width='446' height='92' />
     </div>
-    <div id='links' class='block'>
+    <div id="feature">
+    <div id="f1"></div>
+    <div id="f2"></div>
+    <div id="f3">
+      <form method="post" id="signin" action="#">
+    	<p>
+      <label for="username">username:</label>
+      <input id="username" name="username" value="" title="username" tabindex="4" type="text">
+      </p>
+      <p>
+        <label for="password">password:</label>
+        <input id="password" name="password" value="" title="password" tabindex="5" type="password">
+      </p>
+      <p class="remember">
+        <input id="signin_submit" value="Sign in" tabindex="6" type="submit">
+        <input id="remember" name="remember_me" value="1" tabindex="7" type="checkbox">
+        <label for="remember">Remember me</label>
+      </p>
+      <p class="forgot"> <a href="#"id="resend_password_link">Forgot your password?</a> </p>
+      <p class="forgot-username"> <a id=forgot_username_link title="If you remember your password, try logging in with your email" href="#">Forgot your username?</a> </p>
+    	</form>	
+    </div>
+    </div>
+    <div id='links'>
         <h2>Select a developer</h2>
         <?php foreach($users as $user): ?>
-        <a href='?developer=<?= $user ?>'><?= $user ?></a>
+        <li class='dev'><a href='?developer=<?= $user ?>'><?= $user ?></a></li>
         <?php endforeach ?>
         <div style='clear: both'></div>
     </div>
@@ -249,7 +275,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
             </div>
 
             <?php if($currentFolder): ?>
-                <div style='float: left; margin-left: 10px; width: 668px'>
+                <div style='float: left; margin-left: 10px; width: 748px'>
                     <div class='block'>
                         <h2><?= htmlspecialchars($currentFolder) ?></h2>
                         <?php if (count($files) > 0): ?>
@@ -300,23 +326,11 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
             <?php endif ?>
         <?php else: ?>
             <div id='content'>
-                Click a link at the top to view each developers' files.
             </div>
         <?php endif ?>
         <div style='clear: both'></div>
     </div>
-<div style="text-align:center; width:100%; padding:20px 0px; margin:0px auto;"><a href="http://www.bytemark.co.uk/r/androtransfer"><img src="http://knok.exynos.co/wp-content/uploads/2012/07/bytemark_mono.png" style="height:40px; width:auto;" />
+<div style="text-align:center; width:100%; padding:20px 0px; margin:0px auto;"><a href="http://www.bytemark.co.uk/r/androtransfer"><img src="/images/bytemark_mono.png" style="height:40px; width:auto;" />
 </a></div>
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-6244853272122205";
-/* Bottom bar */
-google_ad_slot = "7769612158";
-google_ad_width = 468;
-google_ad_height = 60;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
 </body>
 </html>

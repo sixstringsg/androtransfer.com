@@ -25,36 +25,46 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
-    width: 900px;
+    width: 980px;
     margin: 0 auto;
+    background: #151515 url(images/background.png) no-repeat top center;
 }
+
+body, * {
+    font-family: "Roboto", Tahoma, Arial;
+}
+
 ol, ul {
     list-style: none;
 }
+
 blockquote, q {
     quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
     content: '';
     content: none;
 }
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
 
-body {
-    padding: 20px;
-}
-body, * {
-    font-family: "Roboto", Tahoma, Arial;
-}
-
 #links {
     background: #eee;
-    margin-top: 10px;
+    margin-top: 0px;
     border: 1px solid #333;
+    margin: 5px 0 0 0;
+    padding: 10px;
+}
+
+#links li.dev {
+	width: 238px;
+	list-style: none;
+	float: left;
 }
 
 #links a {
@@ -63,10 +73,16 @@ body, * {
     color: #098edb;
     padding: 10px 15px;
     text-decoration: none;
+    font-size: 12px;
+    width: 208px;
+}
+
+#links li:hover{
+		background: #d2d2d2;
 }
 
 #links a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 #page {
@@ -83,25 +99,59 @@ body, * {
 
 .block {
     background: #eee;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -o-border-radius: 5px;
-    border-radius: 5px;
     padding: 10px;
     border: 1px solid #333;
-    margin-top: 20px;
 }
 
-.block > h2 {
+#links h2 {
     display: block;
     padding: 10px;
     font-weight: bold;
-    border-bottom: 1px solid #ccc;
-    color: #fff;
-    background: #000;
-    margin: -10px -10px 10px -10px;
+    color: #151515;
+    background: #00ccff;
+    text-transform: uppercase;
+    margin: 0 0 5px 0;
 }
 
+#feature {
+		width: 980px;
+		height: 200px;
+		background: url("images/feature.png") no-repeat top center;
+}
+
+#f1 {
+		width: 325px;
+		height: 200px;
+		float: left;
+	}
+#f2 {
+		width: 330px;
+		height: 200px;
+		float: left;
+}
+#f3 {
+		width: 325px;
+		height: 200px;
+		float: left;
+}
+
+#f3 form {
+	margin: 60px 0 0 30px;
+	width: 295px;
+}
+
+#f3 label{
+	text-transform: uppercase;
+	color: #151515;
+	font-size: 12px;
+}
+
+#f3 p a{
+	color: #0d748d;
+	text-transform: uppercase;
+	font-size: 12px;
+	text-decoration: none;
+}	
 
 #sidebar .block ul li a {
     color: #098edb;
@@ -116,8 +166,8 @@ body, * {
 }
 
 #sidebar .block ul li.active a {
-    background: #000;
-    color: #fff;
+    background: #d2d2d2;
+    color: #151515;
 }
 
 .download a {
@@ -216,7 +266,33 @@ tr th {
     font-style: italic;
 }
 
+#header {
+		width: 980px;
+		margin: 10px 0 5px 0;
+}
+
+#logo {
+		width: 250px;
+		float: left;
+		height: 94px;
+		margin: 0 2px 0 0;
+		background: url("images/logo.png") no-repeat top center;
+}
+	
+#advertise {
+		width: 980px;
+		height: 95px;
+		text-align: center;
+		margin: 5px 0 0px 0;
+		padding: 5px 0 0 0;
+		background: #FFFFFF url("images/advertise.png") no-repeat top center;
+}
+
 #footer {
     padding: 100px;
     text-align: center;
+}
+
+.clear {
+	clear: both;
 }
