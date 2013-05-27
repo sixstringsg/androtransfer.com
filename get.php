@@ -325,7 +325,15 @@ google_ad_height = 60;
 }
 
 }else{
- header("Content-Disposition: attachment; filename=$filename");
+ header("Pragma: public");
+ header("Expires: 0");
+ header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+ header("Cache-Control: public");
+ header("Content-Description: File Transfer");
+ header("Content-type: application/octet-stream");
+ header("Content-Disposition: attachment; filename=\"".$filename."\"");
+ header("Content-Transfer-Encoding: binary");
+ header("Content-Length: ".filesize($baseDir . "/" . $path));
  readfile($baseDir . "/" . $path);
 }
 ?>
