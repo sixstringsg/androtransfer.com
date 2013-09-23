@@ -48,6 +48,95 @@ die;
 $return_arr = array();
 
 if($device == ""){
+
+if($dev == "Gapps"){
+$url = "http://androtransfer.com/?developer=".$dev;
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL,"$url");
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, "10");
+curl_setopt($ch, CURLOPT_TIMEOUT, "10");
+$gurl = curl_exec($ch);
+curl_close($ch);
+
+  $i = 1;
+
+$res = strstr($gurl, "<div style='float: left; margin-left: 10px; width: 668px'>");
+
+
+    if ($res)
+    {
+
+      while ($i <= 50)
+
+      {
+
+        $res = strstr ($res, "<tr class='download'>");
+   
+	$filename = extstr3($res,".zip'>","</a>");
+	$url = extstr3($res,"<a style='display: block' href='","'>");
+	$url = 'http://androtransfer.com/'.$url;
+	$md5 = extstr3($res,"<span style='font-family: Courier'>","</span>");
+
+        $dateres = strstr ($res, "<span style='font-family: Courier'>");
+	$date = extstr3($dateres,"<td>","</td>");
+        $dateres = strstr ($res, "<td style='font-size: 24px; text-align: right;'>");
+
+        $sizeres = strstr ($res, "".$date."</td>");
+	$filesize = extstr3($sizeres,"<td>","</td>");
+        $sizeres = strstr ($res, "<td style='font-size: 24px; text-align: right;'>");
+
+	$rep = array("(",")");
+
+	$filesize = trim(str_replace($rep, " ", $filesize));
+
+	$dl_count = extstr3($res,"<td style='font-size: 24px; text-align: right;'>","</td>");
+
+	$dl_count = trim(str_replace($rep, " ", $dl_count));
+
+        $res = strstr ($res, '</tr>');
+
+
+
+				if ($filename == '')
+				{
+				  if($i == 1){
+						echo 'Error (2): Results not found';
+						die;
+				  }
+				}
+				else
+				{
+						++$ts;
+
+if($debug == 1){
+echo $filename.'<br>';
+echo $url.'<br>';
+echo $md5.'<br>';
+echo $date.'<br>';
+echo $filesize.'<br>';
+echo $dl_count.'<br>';
+echo '<br>';
+}else{
+        $row_array['filename'] = $filename;
+        $row_array['url'] = $url;
+        $row_array['md5'] = $md5;
+        $row_array['released'] = $date;
+        $row_array['filesize'] = $filesize;
+        $row_array['dl_count'] = $dl_count;
+
+        array_push($return_arr,$row_array);
+}
+
+				}
+				++$i;
+		}
+}
+
+// is not gapps
+}else{
 $url = "http://androtransfer.com/?developer=".$dev;
 
 $ch = curl_init();
@@ -105,6 +194,8 @@ echo '<br><br>';
 				++$i;
 		}
 }
+
+} // end gapps check
 
 /// device is defined
 }else{
