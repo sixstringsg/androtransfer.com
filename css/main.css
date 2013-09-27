@@ -25,7 +25,7 @@ textarea {
 body {
     font-size: 1em;
     line-height: 1.4;
-	text-shadow: 0 0 4px rgba(0,222,0,0.8);
+	text-shadow: 0 0 4px rgba(0,222,0,0.6);
 }
 
 ::-moz-selection {
@@ -58,11 +58,10 @@ h1, h2, h3, h4 {
 }
 
 h2 {
-	padding: 10px 5px;
-	margin: -2px -2px 0;
+	padding: 7px 15px 7px 5px;
+	margin: 0;
 	background: #0a0;
 	color: #030;
-	text-shadow: 0 0 5px rgba(0,0,0,0.4);
 	letter-spacing: -2px;
 }
 
@@ -70,17 +69,22 @@ a, a:visited {
 	color: #0c0;
     text-decoration: underline;
 	text-shadow: 0 0 6px rgba(0,222,0,0.8);
+	-webkit-transition: all 500ms ease-out;
+	-moz-transition: all 500ms ease-out;
+	-ms-transition: all 500ms ease-out;
+	-o-transition: all 500ms ease-out;
+	transition: all 500ms ease-out;
 }
 
 a:hover {
 	background: #0f0;
 	color: #030;
     text-decoration: none;
-	text-shadow: 0 0 2px rgba(0,0,0,0.5);
+	text-shadow: 0 0 1px rgba(0,0,0,0.5);
 }
 
 a:active {
-	color: #fff000;
+	color: #0a0;
 }
 
 ul {
@@ -130,12 +134,14 @@ body {
 	font: 14px/18px droidsans, Consolas, Terminal, Monospace;
 	color: #0a0;
 	background: url(../images/body_bg.gif) repeat fixed;
-	height: 100%;
 }
 
 .lens-flare {
-    padding: 0 10px;
 	background: url(../images/lens_flare.png) no-repeat right -7px fixed;
+	position: fixed;
+	z-index: -1;
+	height: 100%;
+	width: 100%;
 }
 
 /* ===================
@@ -169,14 +175,22 @@ header a {
 header .partners {
 	display: inline-block;
 	vertical-align: top;
+	margin-left: 30px;
 }
 
-header .partners {
-	
+header .partners h2 {
+	padding: 5px 7px;
+	margin-bottom: 7px;
+}
+
+header .partners p {
+	margin: 5px 0 3px;
 }
    
 header .partners a {
 	display: block;
+	padding: 0 7px;
+	line-height: 20px;
 }
 
 /* ==============
@@ -191,35 +205,91 @@ header .partners a {
     font-size: 2em;
 }
 
+.andro-column {
+	border-right: 1px dashed;
+}
+
+.andro-column h2 {
+	margin: 25px 0 0;
+}
+
+.andro-column ul {
+	padding: 0 5px;
+}
+
+.andro-column ul li {
+	display: inline-block;
+	line-height: 25px;
+}
+
+.andro-column ul li a {
+	display: block;
+}
+
+.andro-column ul li.active a {
+	background: #0f0;
+	color: #030;
+	text-shadow: 0 0 1px rgba(0,0,0,0.5);
+}
+
 #filelisting thead tr th {
 	background: #080;
 	color: #0d0;
-	text-shadow: 0 0 4px rgba(0,222,0,0.8);
+	text-shadow: 0 0 0;
 	cursor: pointer;
 	font-size: 16px;
-	letter-spacing: -2px;
+	letter-spacing: -1px;
 	padding: 2px 20px 2px 2px;
 }
 
 #filelisting thead tr th.headerSortUp { 
     background: url(../images/sort_down.png) no-repeat right 2px center #0f0;
+	color: #040;
 } 
 
 #filelisting thead tr th.headerSortDown { 
     background: url(../images/sort_up.png) no-repeat right 2px center #0f0; 
+	color: #040;
 } 
 
 #filelisting tbody tr td {
 	padding: 3px 10px;
+	text-align: center;
 }
 
 #filelisting tbody tr td.dl-count {
 	text-align: right;
 }
 
+#files table {
+	width: 100%;
+	margin: 0 0 50px 0;
+}
+
+#files .cell-perms, #files .cell-owner {
+	display: none;
+}
 
 .footer-container {
 	clear: both;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	height: 92px;
+}
+
+.footer-container .bottom-ad {
+}
+
+.footer-container h2 {
+	margin: 0;
+	padding: 7px 10px;
+	font-size: 14px;
+	letter-spacing: -1px;
+}
+
+.footer-container a {
+	color: #000;
 }
 
 /* ===============
@@ -237,39 +307,88 @@ header .partners a {
 @media only screen and (min-width: 480px) {
 
 /* ====================
-    INTERMEDIATE: Menu
+    >480px: CSS3 Effects
    ==================== */
 
-    nav a {
-    }
-
-    nav li:first-child a {
-    }
-
-    nav li:last-child a {
-    }
-
-/* ========================
-    INTERMEDIATE: IE Fixes
-   ======================== */
-
-    nav ul li {
-    }
-
-    .oldie nav a {
-        margin: 0 0.7%;
-    }
 }
 
 @media only screen and (min-width: 768px) {
 
 /* ====================
-    WIDE: CSS3 Effects
+    >768px: CSS3 Effects
    ==================== */
 
-	#files table {
-		max-width: 600px;
+	.andro-column {
+		float: left;
 	}
+	
+	.andro-column h2 {
+		margin: 0;
+	}
+	
+	.andro-column ul li {
+		display: block;
+		line-height: 25px;
+	}
+}
+
+@media only screen and (min-width: 960px) {
+
+/* ====================
+    >960px: CSS3 Effects
+   ==================== */
+
+	.header-container {
+		height: 172px;
+	}
+
+    .andro-column {
+		border: 0;
+	}
+	
+	.andro-column ul {
+		overflow: auto;
+		padding: 15px 30px 15px 10px;
+    }
+		
+	.andro-column ul li a {
+		margin: 0 -30px 0 -20px;
+		padding: 0 30px 0 20px;
+	}
+	
+	#devs, #folders {
+		position: relative;
+		z-index: 10;
+	}
+	
+	#folders {
+	}
+	
+	#folders ul {
+		padding: 15px 30px 15px 20px;
+	}
+	
+	#files {
+		height: 100%;
+		float: none;
+	}
+	
+	#files h2 {
+		margin: 0;
+	}
+		
+	#files table {
+		padding: 5px;
+	}
+	
+	#files table tr td.dl-filename {
+		text-align: left;
+	}	
+	
+	#files table tr td.dl-count {
+		padding-right: 60px;
+	}
+
 
 }
 
@@ -278,38 +397,9 @@ header .partners a {
 /* ===============
     Maximal Width
    =============== */
-
-    .andro-column {
-		float: left;
-		border: 2px dashed #0a0;
-		border-right: 0;
-	}
 	
-	.andro-column ul {
-		max-height: 400px;
-		overflow: auto;
-		padding: 15px 5px 5px;
-    }
-	
-	.andro-column ul li {
-		line-height: 25px;
-	}
-	
-	#devs {
-		width: 14%;
-	}
-	
-	#folders {
-		width: 14%;
-	}
-	
-	#files {
-		width: 69%;
-	}
-		
-	#files table {
-		padding: 5px;
-		min-width: 960px;
+	#files .cell-perms, #files .cell-owner {
+		display: table-cell;
 	}
 }
 

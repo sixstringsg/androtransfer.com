@@ -216,7 +216,7 @@ if ($currentDeveloper) {
 		<h2>//<?= htmlspecialchars($currentDeveloper) ?></h2>
 		<ul>
 		<?php foreach($subFolders as $folder): ?>
-			<li class='<?= $currentFolder == $folder ? "active" : "" ?>'>/<a href='?developer=<?= rawurlencode($currentDeveloper) ?>&amp;folder=<?= rawurlencode($folder) ?>'><?= $folder ?></a></li>
+			<li class='<?= $currentFolder == $folder ? "active" : "" ?>'><a href='?developer=<?= rawurlencode($currentDeveloper) ?>&amp;folder=<?= rawurlencode($folder) ?>'><?= $folder ?></a></li>
 		<?php endforeach ?>
 		</ul>
 	</div>
@@ -228,8 +228,8 @@ if ($currentDeveloper) {
 				<table id="filelisting" class="tablesorter">
 					<thead>
 					<tr>
-						<th></th>
-						<th>Owner</th>
+						<th class="cell-perms"></th>
+						<th class="cell-owner">Owner</th>
 						<th>Size (mB)</th>
 						<th>Modified</th>
 						<th>Filename</th>
@@ -249,17 +249,17 @@ if ($currentDeveloper) {
 
 					if (file_exists($filePath)) {
 						//echo "$filePath was last modified: " . date ("F d Y H:i:s.", filemtime($resolvedPath));
-						$last_modified = date ("Y-m-d h:m", filemtime($resolvedPath));
+						$last_modified = date ("Y-m-d H:m", filemtime($resolvedPath));
 					}else{
 						$last_modified = 'N/A';
 					}
 					?>
 
 					<tr class="download">
-						<td>
+						<td class="cell-perms">
 							-rw-r--r--
 						</td>
-						<td>
+						<td class="cell-owner">
 							<?= htmlspecialchars($currentDeveloper) ?>
 						</td>
 						<td>
@@ -268,7 +268,7 @@ if ($currentDeveloper) {
 						<td>
 							<?=$last_modified?>
 						</td>
-						<td>
+						<td class="dl-filename">
 							<div class='name'><a style='display: block' href='get.php?p=<?= $resolvedPath ?>'><?= $file ?></a></div>
 							<?php if(isset($fileMd5s[$resolvedPath])): ?>
 								<span class='info'><strong>MD5:</strong> <span style='font-family: Courier'><?= $fileMd5s[$resolvedPath] ?></span></span>
@@ -276,7 +276,6 @@ if ($currentDeveloper) {
 
 						<!---<span class='info'><strong>MD5:</strong> <span style='font-family: Courier'><?//=md5_file($resolvedPath);?></span></span>--->
 						</td>
-						<!---<td><?= date("F dS Y", $fileMTimes[$resolvedPath]) ?></td>--->
 						<td class="dl-count">
 							<?= number_format(isset($downloadCounts[$resolvedPath]) ? $downloadCounts[$resolvedPath] : 0, 0, '.', '') ?>
 						</td>
@@ -291,7 +290,6 @@ if ($currentDeveloper) {
 					No files found.
 				<? } ?>
 			<?php endif ?>
-			<?php include 'androxfer-google_ad_1.php'; ?>
 		</div>
 
 		<?php if ($folderReadme): ?>

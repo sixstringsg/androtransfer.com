@@ -17,14 +17,52 @@ function externalLinks() {
  }
 }
 
+function fixColumnHeight() {
+	var pageHeight = jQuery(window).height();
+	var pageWidth = jQuery(window).width();
+	var headerHeight = pageHeight - 326;
+	if (pageWidth > 960) {
+		$('.andro-column ul').css({maxHeight: headerHeight + 'px' });
+	} else {
+	}
+}
+
+function fixFilesWidth() {
+	var pageWidth = jQuery(window).width();
+	var devFolders = $('#devs').outerWidth() + $('#folders').outerWidth();
+	var fileTable = pageWidth - devFolders;
+	if (pageWidth > 1280) {
+		$('#files table').css({width: '960px' });
+	} else if (pageWidth < 768) {
+		$('#files table').css({width: '100%' });
+	} else {
+		$('#files table').css({width: fileTable + 'px' });
+	}
+}
 
 // Execute when the DOM is ready
 //
 $(document).ready(function() {	
-	
+
+	fixColumnHeight();
+	fixFilesWidth();
 	externalLinks();
+	
+	$(window).resize(function() {
+		fixColumnHeight();
+		fixFilesWidth();
+	});	
+	
 	$("#filelisting").tablesorter({
-		sortList: [[1,1]],
+		sortList: [[3,1]],
+		headers: { 
+            0: { 
+                sorter: false 
+            }, 
+            1: { 
+                sorter: false 
+            } 
+        },
 		cssAsc: "headerSortUp",
 		cssDesc: "headerSortDown"
 	});	
