@@ -1,0 +1,447 @@
+/* ==========================================================================
+   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   ========================================================================== */
+
+@font-face {
+    font-family: 'droidsans';
+    src: url('../fonts/DroidSansMono-webfont.eot');
+    src: url('../fonts/DroidSansMono-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/DroidSansMono-webfont.woff') format('woff'),
+         url('../fonts/DroidSansMono-webfont.ttf') format('truetype'),
+         url('../fonts/DroidSansMono-webfont.svg#droid_sans_monoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #040;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+	text-shadow: 0 0 4px rgba(0,222,0,0.8);
+}
+
+::-moz-selection {
+    background: #0f0;
+	color: #030;
+    text-shadow: none;
+}
+
+::selection {
+    background: #0f0;
+	color: #030;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #0a0;
+    margin: 1em 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+h1, h2, h3, h4 {
+	
+}
+
+h2 {
+	padding: 10px 5px;
+	margin: -2px -2px 0;
+	background: #0a0;
+	color: #030;
+	text-shadow: 0 0 5px rgba(0,0,0,0.4);
+	letter-spacing: -2px;
+}
+
+a, a:visited {
+	color: #0c0;
+    text-decoration: underline;
+	text-shadow: 0 0 6px rgba(0,222,0,0.8);
+}
+
+a:hover {
+	background: #0f0;
+	color: #030;
+    text-decoration: none;
+	text-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
+a:active {
+	color: #fff000;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+ul li {
+	list-style: none;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+::-webkit-scrollbar { width: 12px; height: 12px;}
+::-webkit-scrollbar-button {  background-color: #0a0; }
+::-webkit-scrollbar-track {  background-color: #0a0;}
+::-webkit-scrollbar-track-piece { background-color: #040;}
+::-webkit-scrollbar-thumb { background-color: #0c0; border-radius: 3px;}
+::-webkit-scrollbar-corner { background-color: #0a0;}}
+::-webkit-resizer { background-color: #0a0;}
+
+
+/* ===== AndroTransfer Styles ==================================================
+   Author: George 'scar45' Merlocco
+   ========================================================================== */
+
+html {
+	height: 100%;
+}
+   
+body {
+	font: 14px/18px droidsans, Consolas, Terminal, Monospace;
+	color: #0a0;
+	background: url(../images/body_bg.gif) repeat fixed;
+	height: 100%;
+}
+
+.lens-flare {
+    padding: 0 10px;
+	background: url(../images/lens_flare.png) no-repeat right -7px fixed;
+}
+
+/* ===================
+    ALL: Console Theme
+   =================== */
+
+.header-container header a {
+	text-decoration: none;
+}
+
+.footer-container,
+.main aside {
+}
+
+.header-container,
+.footer-container,
+.main aside {
+}
+
+.title {
+}
+
+/* ==============
+    MOBILE: Menu
+   ============== */
+
+header a {
+	display: inline-block;
+}
+
+header .partners {
+	display: inline-block;
+	vertical-align: top;
+}
+
+header .partners {
+	
+}
+   
+header .partners a {
+	display: block;
+}
+
+/* ==============
+    MOBILE: Main
+   ============== */
+
+.main {
+    padding: 30px 0;
+}
+
+.main article h1 {
+    font-size: 2em;
+}
+
+#filelisting thead tr th {
+	background: #080;
+	color: #0d0;
+	text-shadow: 0 0 4px rgba(0,222,0,0.8);
+	cursor: pointer;
+	font-size: 16px;
+	letter-spacing: -2px;
+	padding: 2px 20px 2px 2px;
+}
+
+#filelisting thead tr th.headerSortUp { 
+    background: url(../images/sort_down.png) no-repeat right 2px center #0f0;
+} 
+
+#filelisting thead tr th.headerSortDown { 
+    background: url(../images/sort_up.png) no-repeat right 2px center #0f0; 
+} 
+
+#filelisting tbody tr td {
+	padding: 3px 10px;
+}
+
+#filelisting tbody tr td.dl-count {
+	text-align: right;
+}
+
+
+.footer-container {
+	clear: both;
+}
+
+/* ===============
+    ALL: IE Fixes
+   =============== */
+
+.ie7 .title {
+    padding-top: 20px;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+
+/* ====================
+    INTERMEDIATE: Menu
+   ==================== */
+
+    nav a {
+    }
+
+    nav li:first-child a {
+    }
+
+    nav li:last-child a {
+    }
+
+/* ========================
+    INTERMEDIATE: IE Fixes
+   ======================== */
+
+    nav ul li {
+    }
+
+    .oldie nav a {
+        margin: 0 0.7%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+/* ====================
+    WIDE: CSS3 Effects
+   ==================== */
+
+	#files table {
+		max-width: 600px;
+	}
+
+}
+
+@media only screen and (min-width: 1140px) {
+
+/* ===============
+    Maximal Width
+   =============== */
+
+    .andro-column {
+		float: left;
+		border: 2px dashed #0a0;
+		border-right: 0;
+	}
+	
+	.andro-column ul {
+		max-height: 400px;
+		overflow: auto;
+		padding: 15px 5px 5px;
+    }
+	
+	.andro-column ul li {
+		line-height: 25px;
+	}
+	
+	#devs {
+		width: 14%;
+	}
+	
+	#folders {
+		width: 14%;
+	}
+	
+	#files {
+		width: 69%;
+	}
+		
+	#files table {
+		padding: 5px;
+		min-width: 960px;
+	}
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
