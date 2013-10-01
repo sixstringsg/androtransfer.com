@@ -233,7 +233,7 @@ if ($currentDeveloper) {
 						<th>Size (mB)</th>
 						<th>Modified</th>
 						<th>Filename</th>
-						<th>Downloads</th>
+						<th class="dl-count">Downloads</th>
 					</tr>
 					</thead>
 					<tbody>
@@ -284,11 +284,13 @@ if ($currentDeveloper) {
 					</tbody>
 				</table>
 			<?php else: ?>
+				<div class="dir-message">
 				<? if(!$_GET['folder']){ ?>
-					Please select a device on your left.
+					<p>Please select a subfolder.</p>
 				<? }else{ ?>
-					No files found.
+					<p>No files found.</p>
 				<? } ?>
+				</div>
 			<?php endif ?>
 		</div>
 

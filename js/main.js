@@ -20,8 +20,8 @@ function externalLinks() {
 function fixColumnHeight() {
 	var pageHeight = jQuery(window).height();
 	var pageWidth = jQuery(window).width();
-	var headerHeight = pageHeight - 326;
-	if (pageWidth > 960) {
+	var headerHeight = pageHeight - 346;
+	if (pageWidth > 760) {
 		$('.andro-column ul').css({maxHeight: headerHeight + 'px' });
 	} else {
 	}
@@ -33,10 +33,10 @@ function fixFilesWidth() {
 	var fileTable = pageWidth - devFolders;
 	if (pageWidth > 1280) {
 		$('#files table').css({width: '960px' });
-	} else if (pageWidth < 768) {
+	} else if (pageWidth < 760) {
 		$('#files table').css({width: '100%' });
 	} else {
-		$('#files table').css({width: fileTable + 'px' });
+		$('#files table').css({width: fileTable - 3 + 'px' });
 	}
 }
 

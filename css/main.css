@@ -113,6 +113,16 @@ textarea {
     padding: 0.2em 0;
 }
 
+body{
+  scrollbar-base-color: #0c0;
+  scrollbar-3dlight-color: #0a0;
+  scrollbar-highlight-color: #0a0;
+  scrollbar-track-color: #040;
+  scrollbar-arrow-color: black;
+  scrollbar-shadow-color: #0a0;
+  scrollbar-dark-shadow-color: #040;
+}
+
 ::-webkit-scrollbar { width: 12px; height: 12px;}
 ::-webkit-scrollbar-button {  background-color: #0a0; }
 ::-webkit-scrollbar-track {  background-color: #0a0;}
@@ -120,6 +130,31 @@ textarea {
 ::-webkit-scrollbar-thumb { background-color: #0c0; border-radius: 3px;}
 ::-webkit-scrollbar-corner { background-color: #0a0;}}
 ::-webkit-resizer { background-color: #0a0;}
+
+@-moz-document url-prefix(http://),url-prefix(https://) {
+scrollbar {
+   -moz-appearance: none !important;
+   background: rgb(0,255,0) !important;
+}
+thumb,scrollbarbutton {
+   -moz-appearance: none !important;
+   background-color: rgb(0,0,255) !important;
+}
+
+thumb:hover,scrollbarbutton:hover {
+   -moz-appearance: none !important;
+   background-color: rgb(255,0,0) !important;
+}
+
+scrollbarbutton {
+   display: none !important;
+}
+
+scrollbar[orient="vertical"] {
+  min-width: 12px !important;
+}
+}
+
 
 
 /* ===== AndroTransfer Styles ==================================================
@@ -171,6 +206,10 @@ body {
 header a {
 	display: inline-block;
 }
+header a pre {
+	font-size: 10px;
+	line-height: 12px;
+}
 
 header .partners {
 	display: inline-block;
@@ -205,9 +244,6 @@ header .partners a {
     font-size: 2em;
 }
 
-.andro-column {
-	border-right: 1px dashed;
-}
 
 .andro-column h2 {
 	margin: 25px 0 0;
@@ -215,6 +251,7 @@ header .partners a {
 
 .andro-column ul {
 	padding: 0 5px;
+	overflow: auto;
 }
 
 .andro-column ul li {
@@ -230,6 +267,10 @@ header .partners a {
 	background: #0f0;
 	color: #030;
 	text-shadow: 0 0 1px rgba(0,0,0,0.5);
+}
+
+.dir-message {
+	margin: 5px 20px;
 }
 
 #filelisting thead tr th {
@@ -257,8 +298,8 @@ header .partners a {
 	text-align: center;
 }
 
-#filelisting tbody tr td.dl-count {
-	text-align: right;
+#filelisting .dl-count {
+	display: none;
 }
 
 #files table {
@@ -276,6 +317,7 @@ header .partners a {
 	bottom: 0;
 	width: 100%;
 	height: 92px;
+	padding-top: 20px;
 }
 
 .footer-container .bottom-ad {
@@ -318,6 +360,11 @@ header .partners a {
     >768px: CSS3 Effects
    ==================== */
 
+   header a pre {
+		font-size: 15px;
+		line-height: 17px;
+	}
+
 	.andro-column {
 		float: left;
 	}
@@ -330,6 +377,8 @@ header .partners a {
 		display: block;
 		line-height: 25px;
 	}
+
+
 }
 
 @media only screen and (min-width: 960px) {
@@ -371,6 +420,7 @@ header .partners a {
 	#files {
 		height: 100%;
 		float: none;
+		display: inline-block;
 	}
 	
 	#files h2 {
@@ -389,6 +439,10 @@ header .partners a {
 		padding-right: 60px;
 	}
 
+	#filelisting .dl-count {
+		text-align: right;
+		display: table-cell;
+	}
 
 }
 
