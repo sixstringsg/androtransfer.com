@@ -206,29 +206,28 @@ body {
 header a {
 	display: inline-block;
 }
+
 header a pre {
 	font-size: 10px;
 	line-height: 12px;
 }
 
 header .partners {
-	display: inline-block;
-	vertical-align: top;
-	margin-left: 30px;
+	display: none;
 }
 
-header .partners h2 {
-	padding: 5px 7px;
+.footer-partners h2 {
 	margin-bottom: 7px;
 }
 
-header .partners p {
+.footer-partners .inner-partners {
+	padding: 5px 10px;
 	margin: 5px 0 3px;
 }
-   
-header .partners a {
+
+.footer-partners a {
 	display: block;
-	padding: 0 7px;
+	padding: 0;
 	line-height: 20px;
 }
 
@@ -247,6 +246,7 @@ header .partners a {
 
 .andro-column h2 {
 	margin: 25px 0 0;
+	line-height: 25px;
 }
 
 .andro-column ul {
@@ -257,6 +257,7 @@ header .partners a {
 .andro-column ul li {
 	display: inline-block;
 	line-height: 25px;
+	margin: 2px 5px;
 }
 
 .andro-column ul li a {
@@ -270,7 +271,58 @@ header .partners a {
 }
 
 .dir-message {
-	margin: 5px 20px;
+	margin: 15px 20px;
+}
+
+#choose-dev p {
+	margin: 15px 20px;
+}
+
+#links p {
+	line-height: 26px;
+	margin: 0;
+	padding: 0;
+}
+
+#links p#counttext {
+	background: #0a0;
+	color: #040;
+	margin-top: 10px;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 0 0 4px rgba(0, 222, 0, 0.6);
+	animation-name: glow;
+	animation-delay: 0s;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-play-state: running;
+	/* Safari and Chrome: */
+	-webkit-animation-name: glow;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-delay: 0s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+	-webkit-animation-play-state: running;
+
+}
+
+@keyframes glow
+{
+from {background: #0a0; color: #040;text-shadow: 0 0 4px rgba(0, 222, 0, 0.6);}
+to {background: none; color: #0a0;text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);}
+}
+
+@-webkit-keyframes glow /* Safari and Chrome */
+{
+from {background: #0a0; color: #040;text-shadow: 0 0 4px rgba(0, 222, 0, 0.6);}
+to {background: none; color: #0a0;text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);}
+}
+
+.downloading-ad {
+	margin: 15px 0;
 }
 
 #filelisting thead tr th {
@@ -320,6 +372,11 @@ header .partners a {
 	padding-top: 20px;
 }
 
+.footer-partners {
+	display: block;
+}
+
+
 .footer-container .bottom-ad {
 }
 
@@ -346,11 +403,21 @@ header .partners a {
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 380px) {
 
-/* ====================
-    >480px: CSS3 Effects
-   ==================== */
+	header a pre {
+		font-size: 13px;
+		line-height: 12px;
+	}
+
+}
+
+@media only screen and (min-width: 580px) {
+
+	header a pre {
+		font-size: 17px;
+		line-height: 19px;
+	}
 
 }
 
@@ -360,9 +427,31 @@ header .partners a {
     >768px: CSS3 Effects
    ==================== */
 
+    header .partners {
+		display: inline-block;
+		vertical-align: top;
+		margin-left: 30px;
+	}
+
    header a pre {
 		font-size: 15px;
 		line-height: 17px;
+	}
+	
+	header .partners h2 {
+		padding: 5px 7px;
+		margin-bottom: 7px;
+	}
+
+	header .partners .inner-partners {
+		padding: 5px 10px;
+		margin: 5px 0 3px;
+	}
+
+	header .partners a {
+		display: block;
+		padding: 0;
+		line-height: 20px;
 	}
 
 	.andro-column {
@@ -373,11 +462,20 @@ header .partners a {
 		margin: 0;
 	}
 	
+	.andro-column ul {
+		overflow: auto;
+		padding: 15px 30px 15px 10px;
+    }
+	
 	.andro-column ul li {
 		display: block;
 		line-height: 25px;
+		margin: 0;
 	}
 
+	.footer-partners {
+		display: none;
+	}
 
 }
 
@@ -388,17 +486,11 @@ header .partners a {
    ==================== */
 
 	.header-container {
-		height: 172px;
 	}
 
     .andro-column {
 		border: 0;
 	}
-	
-	.andro-column ul {
-		overflow: auto;
-		padding: 15px 30px 15px 10px;
-    }
 		
 	.andro-column ul li a {
 		margin: 0 -30px 0 -20px;

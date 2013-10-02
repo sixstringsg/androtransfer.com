@@ -19,13 +19,15 @@
 </pre>
 			</a>
 			<div class="partners">
-				<h2>Partners / Friends:</h2>
-				<a rel="external" href="http://www.bytemark.co.uk/r/androtransfer">:BYTEMARK HOSTING</a>
-				<a rel="external" href="http://hxcmusic.com/">HXC MUSIC</a>
-				<a rel="external" href="https://plus.google.com/u/0/112132608212015447534/posts">+SCAR45</a>
-				<p>Want to list your files here? Contact:</p>
-				<a rel="external" href="https://plus.google.com/u/0/100014433524368062335/posts">+SIXSTRINGSG</a>
-				<a rel="external" href="https://twitter.com/sixstringsg">@SIXSTRINGSG</a>
+				<h2>partners / friends:</h2>
+				<div class="inner-partners">
+					<a rel="external" href="http://www.bytemark.co.uk/r/androtransfer">:BYTEMARK HOSTING</a>
+					<a rel="external" href="http://hxcmusic.com/">HXC MUSIC</a>
+					<a rel="external" href="https://plus.google.com/u/0/112132608212015447534/posts">+SCAR45</a>
+					<p>Want to list your files here? Contact:</p>
+					<a rel="external" href="https://plus.google.com/u/0/100014433524368062335/posts">+SIXSTRINGSG</a>
+					<a rel="external" href="https://twitter.com/sixstringsg">@SIXSTRINGSG</a>
+				</div>
 			</div>
 		</header>
 	</div>
@@ -33,7 +35,7 @@
 		<h2>developers</h2>
 		<ul>
 			<?php foreach($users as $user): ?>
-			<li class='<?= $currentDeveloper == $user ? "active" : "" ?>'><a href='?developer=<?= $user ?>'><?= $user ?></a></li>
+			<li class='<?= $currentDeveloper == $user ? "active" : "" ?>'><a href='/?developer=<?= $user ?>'><?= $user ?></a></li>
 			<?php endforeach ?>	
 		</ul>
 	</div><!-- end devs -->

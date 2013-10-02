@@ -8,14 +8,15 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 	<? if(($_GET['developer'])&&(!$_GET['folder'])){ ?>
-	<title><?=$_GET['developer'];?> Downloads At Androtransfer.com</title>
+	<title><?=$_GET['developer'];?> Downloads @ AndroXfer.in</title>
 	<? } ?>
 	<? if(($_GET['developer'])&&($_GET['folder'])){ ?>
-	<title><?=$_GET['developer'];?> Downloads For <?=$_GET['folder'];?> At Androtransfer.com</title>
+	<title><?=$_GET['developer'];?> Downloads For <?=$_GET['folder'];?> @ AndroXfer.in</title>
 	<? } ?>
 	<? if((!$_GET['developer'])&&(!$_GET['folder'])){ ?>
-	<title>Androtransfer.com</title>
+	<title>AndroXfer.in</title>
 	<? } ?>
+
 
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width">

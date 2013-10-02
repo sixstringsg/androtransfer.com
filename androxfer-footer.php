@@ -1,3 +1,14 @@
+	<div class="footer-partners andro-column">
+		<h2>partners / friends:</h2>
+		<div class="inner-partners">
+			<a rel="external" href="http://www.bytemark.co.uk/r/androtransfer">:BYTEMARK HOSTING</a>
+			<a rel="external" href="http://hxcmusic.com/">HXC MUSIC</a>
+			<a rel="external" href="https://plus.google.com/u/0/112132608212015447534/posts">+SCAR45</a>
+			<p>Want to list your files here? Contact:</p>
+			<a rel="external" href="https://plus.google.com/u/0/100014433524368062335/posts">+SIXSTRINGSG</a>
+			<a rel="external" href="https://twitter.com/sixstringsg">@SIXSTRINGSG</a>
+		</div>
+	</div>
 	<div class="footer-container">
 		<div class="bottom-ad">
 			<?php include 'androxfer-google_ad_1.php'; ?>
@@ -27,5 +38,3 @@
 	
 	<script src="js/jquery.tablesorter.min.js"></script>
 	<script src="js/main.js"></script>
-</body>
-</html>

@@ -213,7 +213,7 @@ if ($currentDeveloper) {
 				
 <?php if($currentDeveloper): ?>
 	<div id="folders" class="andro-column">
-		<h2>//<?= htmlspecialchars($currentDeveloper) ?></h2>
+		<h2>~/<?= htmlspecialchars($currentDeveloper) ?></h2>
 		<ul>
 		<?php foreach($subFolders as $folder): ?>
 			<li class='<?= $currentFolder == $folder ? "active" : "" ?>'><a href='?developer=<?= rawurlencode($currentDeveloper) ?>&amp;folder=<?= rawurlencode($folder) ?>'><?= $folder ?></a></li>
@@ -304,9 +304,12 @@ if ($currentDeveloper) {
 		<?php endif ?>
 	<?php endif ?>
 <?php else: ?>
-	<div id='content'>
-		Click a link at the top to view each developers' files.
+	<div id="choose-dev" class="andro-column">
+		<h2>&nbsp;</h2>
+		<p>Please choose a developer to view their files available for download.</p>
 	</div>
 <?php endif ?>
 
 <?php include 'androxfer-footer.php'; ?>
+
+</body></html>

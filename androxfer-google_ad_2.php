@@ -1,17 +1,14 @@
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-6244853272122205";
-/* Bottom bar */
-google_ad_slot = "7769612158";
-google_ad_width = 468;
-google_ad_height = 60;
-google_color_border = "00aa00";
-google_color_bg = "061001";
-google_color_link = "00ff00";
-google_color_text = "00ff00";
-google_color_url = "00ff00"; 
-
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+<style>
+.ad-download-file { width: 300px; height: 60px; }
+@media(min-width: 320px) { .ad-download-file { width: 320px; height: 60px; } }
+@media(min-width: 420px) { .ad-download-file { width: 420px; height: 60px; } }
+</style>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- New responsive test -->
+<ins class="adsbygoogle ad-download-file"
+     style="display:inline-block"
+     data-ad-client="ca-pub-6244853272122205"
+     data-ad-slot="7997273568"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
 </script>

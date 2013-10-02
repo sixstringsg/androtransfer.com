@@ -8,7 +8,6 @@
 @media(min-width: 920px) { .ad-table-footer { width: 920px; height: 60px; } }
 @media(min-width: 1020px) { .ad-table-footer { width: 1020px; height: 60px; } }
 @media(min-width: 1120px) { .ad-table-footer { width: 1120px; height: 60px; } }
-@media(min-width: 1220px) { .ad-table-footer { width: 1220px; height: 60px; } }
 </style>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- New responsive test -->
