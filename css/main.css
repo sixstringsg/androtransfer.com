@@ -506,7 +506,7 @@ to {background: none; color: #0a0;text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);}
 	}
 	
 	#folders ul {
-		padding: 15px 30px 15px 20px;
+		padding: 0px 30px 15px 20px;
 	}
 	
 	#files {
