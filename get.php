@@ -1,6 +1,6 @@
 <?php
 /*
- * test.androxfer.in Download Center
+ * androxfer.in Download Center
  * Copyright (C) 2012   Daniel Bateman
  *
  * Download mirror edits by Jimmy Rousseau. (LifeOfCoding)
@@ -38,7 +38,7 @@ function get_info($url){
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,"$url");
 curl_setopt($ch, CURLOPT_USERAGENT, "AndroBot");
-curl_setopt($ch, CURLOPT_REFERER, "http://test.androxfer.in/"); 
+curl_setopt($ch, CURLOPT_REFERER, "http://androxfer.in/"); 
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, false);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, "10");
@@ -158,7 +158,7 @@ if(in_array($ext, $blacklist)) {
     die($ext." is not an allowed extension.");
 }
 if(strpos($path, '../') !== false || strpos($path, '..\\') !== false || strpos(realpath($baseDir.'/'.$path), 'public_html') == false) {
-    die("<meta http-equiv=\"refresh\" content=\"5;url=http://test.androxfer.in/\" /> Error: 2 [ Not Allowed ]");
+    die("<meta http-equiv=\"refresh\" content=\"5;url=http://androxfer.in/\" /> Error: 2 [ Not Allowed ]");
 }
 
 $location = $baseDir."/.counts";
@@ -239,7 +239,7 @@ die;
 $ref=$_SERVER['HTTP_REFERER'];
 $ref='http://google.com/';
 
-if (strpos($ref,'http://test.androxfer.in/')===0 || strpos($ref,'http')!==0 || strpos($ref,'http://www.test.androxfer.in/')===0){
+if (strpos($ref,'http://androxfer.in/')===0 || strpos($ref,'http')!==0 || strpos($ref,'http://www.androxfer.in/')===0){
 	header("Location: ".$dlink);
 }else{
 	$file = $baseDir . "/" . $path;
@@ -301,7 +301,7 @@ countDownObj.count(i);
 function do_download(){
 var newtext = "Initializing File Download...";
 document.getElementById('counttext').innerHTML = newtext;
-document.location.href='http://test.androxfer.in/get.php?p=<?=$_GET['p']?>&countdown=1';
+document.location.href='http://androxfer.in/get.php?p=<?=$_GET['p']?>&countdown=1';
 }
 </script>
 
@@ -373,7 +373,7 @@ countDownObj.count(i);
 function do_download(){
 var newtext = "Initializing File Download...";
 document.getElementById('counttext').innerHTML = newtext;
-document.location.href='http://test.androxfer.in/get.php?p=<?=$_GET['p']?>&countdown=1';
+document.location.href='http://androxfer.in/get.php?p=<?=$_GET['p']?>&countdown=1';
 }
 </script>
 
@@ -459,7 +459,7 @@ countDownObj.count(i);
 function do_download(){
 var newtext = "Initializing File Download...";
 document.getElementById('counttext').innerHTML = newtext;
-document.location.href='http://test.androxfer.in/get.php?p=<?=$_GET['p']?>&directserve=1';
+document.location.href='http://androxfer.in/get.php?p=<?=$_GET['p']?>&directserve=1';
 }
 </script>
 
