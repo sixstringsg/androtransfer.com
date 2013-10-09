@@ -58,7 +58,7 @@ h1, h2, h3, h4 {
 }
 
 h2 {
-	padding: 7px 15px 7px 5px;
+	padding: 4px 15px 7px 5px;
 	margin: 0;
 	background: #0a0;
 	color: #030;
@@ -168,15 +168,11 @@ html {
 body {
 	font: 14px/18px droidsans, Consolas, Terminal, Monospace;
 	color: #0a0;
-	background: url(../images/body_bg.gif) repeat fixed;
+	background: url(../images/body_bg.gif) repeat;
 }
 
 .lens-flare {
-	background: url(../images/lens_flare.png) no-repeat right -7px fixed;
-	position: fixed;
-	z-index: -1;
-	height: 100%;
-	width: 100%;
+	display: none;
 }
 
 /* ===================
@@ -216,19 +212,33 @@ header .partners {
 	display: none;
 }
 
+.inner-partners p {
+	margin: 14px 0 5px;
+}
+
+.inner-partners i, .inner-partners [class^="icon-"], .inner-partners [class*=" icon-"] {
+	font-size: 16px;
+	margin: 0 6px;
+}
+
 .footer-partners h2 {
 	margin-bottom: 7px;
 }
 
+.footer-partners {
+	text-align: center;
+}
+	
 .footer-partners .inner-partners {
 	padding: 5px 10px;
-	margin: 5px 0 3px;
+	margin: 5px 0 15px;
 }
 
 .footer-partners a {
 	display: block;
 	padding: 0;
-	line-height: 20px;
+	line-height: 25px;
+	text-decoration: none;
 }
 
 /* ==============
@@ -251,6 +261,7 @@ header .partners {
 
 .andro-column ul {
 	padding: 0 5px;
+	margin: 0 0 15px 0;
 	overflow: auto;
 }
 
@@ -272,6 +283,10 @@ header .partners {
 
 .dir-message {
 	margin: 15px 20px;
+}
+
+.readme-contents {
+	margin: 10px 20px;	
 }
 
 #choose-dev p {
@@ -330,9 +345,9 @@ to {background: none; color: #0a0;text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);}
 	color: #0d0;
 	text-shadow: 0 0 0;
 	cursor: pointer;
-	font-size: 16px;
-	letter-spacing: -1px;
-	padding: 2px 20px 2px 2px;
+	font-size: 12px;
+	letter-spacing: 0;
+	padding: 4px 20px 3px 2px;
 }
 
 #filelisting thead tr th.headerSortUp { 
@@ -369,7 +384,6 @@ to {background: none; color: #0a0;text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);}
 	bottom: 0;
 	width: 100%;
 	height: 92px;
-	padding-top: 20px;
 }
 
 .footer-partners {
@@ -427,34 +441,25 @@ to {background: none; color: #0a0;text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);}
     >768px: CSS3 Effects
    ==================== */
 
-    header .partners {
-		display: inline-block;
-		vertical-align: top;
-		margin-left: 30px;
-	}
-
-   header a pre {
+	header a pre {
 		font-size: 15px;
 		line-height: 17px;
 	}
-	
+
 	header .partners h2 {
-		padding: 5px 7px;
+		padding: 5px 7px 10px;
 		margin-bottom: 7px;
 	}
 
 	header .partners .inner-partners {
-		padding: 5px 10px;
-		margin: 5px 0 3px;
+		padding: 5px 0 5px 10px;
 	}
 
 	header .partners a {
-		display: block;
-		padding: 0;
-		line-height: 20px;
+		margin: 0 10px 0 0;
 	}
 
-	.andro-column {
+	.andro-column, .readme {
 		float: left;
 	}
 	
@@ -464,7 +469,8 @@ to {background: none; color: #0a0;text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);}
 	
 	.andro-column ul {
 		overflow: auto;
-		padding: 0px 30px 15px 10px;
+		padding: 0px 30px 20px 10px;
+		margin: 0;
     }
 	
 	.andro-column ul li {
@@ -473,10 +479,16 @@ to {background: none; color: #0a0;text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);}
 		margin: 0;
 	}
 
-	.footer-partners {
-		display: none;
+	.andro-column ul li a {
+		margin: 0 -30px 0 -20px;
+		padding: 0 30px 0 20px;
 	}
 
+	.footer-partners {
+		float: none;
+		clear: both;
+	}
+	
 }
 
 @media only screen and (min-width: 960px) {
@@ -485,16 +497,8 @@ to {background: none; color: #0a0;text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);}
     >960px: CSS3 Effects
    ==================== */
 
-	.header-container {
-	}
-
     .andro-column {
 		border: 0;
-	}
-		
-	.andro-column ul li a {
-		margin: 0 -30px 0 -20px;
-		padding: 0 30px 0 20px;
 	}
 	
 	#devs, #folders {
@@ -506,7 +510,7 @@ to {background: none; color: #0a0;text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);}
 	}
 	
 	#folders ul {
-		padding: 0px 30px 15px 20px;
+		padding: 0px 30px 20px 20px;
 	}
 	
 	#files {
@@ -536,13 +540,53 @@ to {background: none; color: #0a0;text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);}
 		display: table-cell;
 	}
 
+	#filelisting th.dl-count {
+		text-align: center;
+	}
+
+
 }
+
+@media only screen and (min-width: 980px) {
+
+    header .partners {
+		display: inline-block;
+		margin: 0 0 0 30px;
+	}
+		
+	header .partners .inner-partners {
+		padding: 5px 0 5px 1%;
+		margin: 5px 0 3px;
+	}
+
+	header .partners a {
+		display: inline-block;
+		float: none;
+		margin: 0;
+		width: 49%;
+	}
+	
+	.footer-partners {
+		display: none;
+	}
+
+}
+
 
 @media only screen and (min-width: 1140px) {
 
 /* ===============
     Maximal Width
    =============== */
+   
+	.lens-flare {
+		display: block;
+		background: url(../images/lens_flare.png) no-repeat right -7px fixed;
+		position: absolute;
+		z-index: -1;
+		height: 100%;
+		width: 100%;
+	}
 	
 	#files .cell-perms, #files .cell-owner {
 		display: table-cell;

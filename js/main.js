@@ -22,11 +22,11 @@ function fixColumnHeight() {
 	var pageWidth = jQuery(window).width();
 	var headerHeight = jQuery(".header-container").outerHeight();
 	var footerHeight = jQuery(".footer-container").outerHeight();
+	var filesTableHeight = jQuery("#filelisting").outerHeight();
 	var h2Height = jQuery("#devs h2").outerHeight();
-	var listHeight = pageHeight - headerHeight - footerHeight - h2Height - 15; // number is the padding in the UL
+	var listHeight = pageHeight - headerHeight - footerHeight - h2Height - 31; // number is the padding in the UL
 	if (pageWidth > 769) {
 		$('.andro-column ul').css({maxHeight: listHeight + 'px' });
-	} else {
 	}
 }
 

@@ -213,7 +213,7 @@ if ($currentDeveloper) {
 				
 <?php if($currentDeveloper): ?>
 	<div id="folders" class="andro-column">
-		<h2>~/<?= htmlspecialchars($currentDeveloper) ?></h2>
+		<h2><i class="icon icon-user"></i>~/<?= htmlspecialchars($currentDeveloper) ?></h2>
 		<ul>
 		<?php foreach($subFolders as $folder): ?>
 			<li class='<?= $currentFolder == $folder ? "active" : "" ?>'><a href='?developer=<?= rawurlencode($currentDeveloper) ?>&amp;folder=<?= rawurlencode($folder) ?>'><?= $folder ?></a></li>
@@ -223,7 +223,7 @@ if ($currentDeveloper) {
 
 	<?php if($currentFolder): ?>
 		<div id="files" class="andro-column">
-			<h2>/<?= htmlspecialchars($currentFolder) ?></h2>
+			<h2><i class="icon icon-openfolderalt"></i>/<?= htmlspecialchars($currentFolder) ?></h2>
 			<?php if (count($files) > 0): ?>
 				<table id="filelisting" class="tablesorter">
 					<thead>
@@ -292,16 +292,17 @@ if ($currentDeveloper) {
 				<? } ?>
 				</div>
 			<?php endif ?>
+			<?php if ($folderReadme): ?>
+				<div class='readme'>
+					<h2>.readme</h2>
+					<div class='readme-contents'>
+						<?= Markdown($folderReadme) ?>
+					</div>
+				</div>
+			<?php endif ?>
+
 		</div>
 
-		<?php if ($folderReadme): ?>
-		<div class='block'>
-			<h2>.readme</h2>
-			<div class='readme'>
-				<?= Markdown($folderReadme) ?>
-			</div>
-		</div>
-		<?php endif ?>
 	<?php endif ?>
 <?php else: ?>
 	<div id="choose-dev" class="andro-column">
