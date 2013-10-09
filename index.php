@@ -223,7 +223,7 @@ if ($currentDeveloper) {
 
 	<?php if($currentFolder): ?>
 		<div id="files" class="andro-column">
-			<h2><i class="icon icon-pixelchest"></i>/<?= htmlspecialchars($currentFolder) ?></h2>
+			<h2><i class="icon icon-openfolderalt"></i>/<?= htmlspecialchars($currentFolder) ?></h2>
 			<?php if (count($files) > 0): ?>
 				<table id="filelisting" class="tablesorter">
 					<thead>
