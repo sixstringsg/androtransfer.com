@@ -58,7 +58,7 @@ h1, h2, h3, h4 {
 }
 
 h2 {
-	padding: 7px 15px 7px 5px;
+	padding: 4px 15px 7px 5px;
 	margin: 0;
 	background: #0a0;
 	color: #030;
@@ -172,11 +172,7 @@ body {
 }
 
 .lens-flare {
-	background: url(../images/lens_flare.png) no-repeat right -7px fixed;
-	position: fixed;
-	z-index: -1;
-	height: 100%;
-	width: 100%;
+	display: none;
 }
 
 /* ===================
@@ -220,15 +216,19 @@ header .partners {
 	margin-bottom: 7px;
 }
 
+.footer-partners {
+	text-align: center;
+}
+	
 .footer-partners .inner-partners {
 	padding: 5px 10px;
-	margin: 5px 0 3px;
+	margin: 5px 0 15px;
 }
 
 .footer-partners a {
 	display: block;
 	padding: 0;
-	line-height: 20px;
+	line-height: 25px;
 }
 
 /* ==============
@@ -251,6 +251,7 @@ header .partners {
 
 .andro-column ul {
 	padding: 0 5px;
+	margin: 0 0 15px 0;
 	overflow: auto;
 }
 
@@ -272,6 +273,10 @@ header .partners {
 
 .dir-message {
 	margin: 15px 20px;
+}
+
+.readme-contents {
+	margin: 10px 20px;	
 }
 
 #choose-dev p {
@@ -330,9 +335,9 @@ to {background: none; color: #0a0;text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);}
 	color: #0d0;
 	text-shadow: 0 0 0;
 	cursor: pointer;
-	font-size: 16px;
-	letter-spacing: -1px;
-	padding: 2px 20px 2px 2px;
+	font-size: 12px;
+	letter-spacing: 0;
+	padding: 4px 20px 3px 2px;
 }
 
 #filelisting thead tr th.headerSortUp { 
@@ -369,7 +374,6 @@ to {background: none; color: #0a0;text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);}
 	bottom: 0;
 	width: 100%;
 	height: 92px;
-	padding-top: 20px;
 }
 
 .footer-partners {
@@ -433,13 +437,13 @@ to {background: none; color: #0a0;text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);}
 		margin-left: 30px;
 	}
 
-   header a pre {
+	header a pre {
 		font-size: 15px;
 		line-height: 17px;
 	}
 	
 	header .partners h2 {
-		padding: 5px 7px;
+		padding: 5px 7px 10px;
 		margin-bottom: 7px;
 	}
 
@@ -454,7 +458,7 @@ to {background: none; color: #0a0;text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);}
 		line-height: 20px;
 	}
 
-	.andro-column {
+	.andro-column, .readme {
 		float: left;
 	}
 	
@@ -464,7 +468,8 @@ to {background: none; color: #0a0;text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);}
 	
 	.andro-column ul {
 		overflow: auto;
-		padding: 0px 30px 15px 10px;
+		padding: 0px 30px 20px 10px;
+		margin: 0;
     }
 	
 	.andro-column ul li {
@@ -473,6 +478,11 @@ to {background: none; color: #0a0;text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);}
 		margin: 0;
 	}
 
+	.andro-column ul li a {
+		margin: 0 -30px 0 -20px;
+		padding: 0 30px 0 20px;
+	}
+	
 	.footer-partners {
 		display: none;
 	}
@@ -485,16 +495,20 @@ to {background: none; color: #0a0;text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);}
     >960px: CSS3 Effects
    ==================== */
 
+	.lens-flare {
+		display: block;
+		background: url(../images/lens_flare.png) no-repeat right -7px fixed;
+		position: fixed;
+		z-index: -1;
+		height: 100%;
+		width: 100%;
+	}
+
 	.header-container {
 	}
 
     .andro-column {
 		border: 0;
-	}
-		
-	.andro-column ul li a {
-		margin: 0 -30px 0 -20px;
-		padding: 0 30px 0 20px;
 	}
 	
 	#devs, #folders {
@@ -506,7 +520,7 @@ to {background: none; color: #0a0;text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);}
 	}
 	
 	#folders ul {
-		padding: 0px 30px 15px 20px;
+		padding: 0px 30px 20px 20px;
 	}
 	
 	#files {
@@ -534,6 +548,10 @@ to {background: none; color: #0a0;text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);}
 	#filelisting .dl-count {
 		text-align: right;
 		display: table-cell;
+	}
+
+	#filelisting th.dl-count {
+		text-align: center;
 	}
 
 }

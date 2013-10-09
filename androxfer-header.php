@@ -19,7 +19,7 @@
 </pre>
 			</a>
 			<div class="partners">
-				<h2>partners / friends:</h2>
+				<h2><i class="icon icon-pixelheart"></i>partners / friends</h2>
 				<div class="inner-partners">
 					<a rel="external" href="http://www.bytemark.co.uk/r/androtransfer">:BYTEMARK HOSTING</a>
 					<a rel="external" href="http://hxcmusic.com/">HXC MUSIC</a>
@@ -32,7 +32,7 @@
 		</header>
 	</div>
 	<div id="devs" class="andro-column">
-		<h2>developers</h2>
+		<h2><i class="icon icon-groups-friends"></i>developers</h2>
 		<ul>
 			<?php foreach($users as $user): ?>
 			<li class='<?= $currentDeveloper == $user ? "active" : "" ?>'><a href='/?developer=<?= $user ?>'><?= $user ?></a></li>

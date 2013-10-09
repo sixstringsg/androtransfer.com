@@ -23,7 +23,7 @@ function fixColumnHeight() {
 	var headerHeight = jQuery(".header-container").outerHeight();
 	var footerHeight = jQuery(".footer-container").outerHeight();
 	var h2Height = jQuery("#devs h2").outerHeight();
-	var listHeight = pageHeight - headerHeight - footerHeight - h2Height - 15; // number is the padding in the UL
+	var listHeight = pageHeight - headerHeight - footerHeight - h2Height - 20; // number is the padding in the UL
 	if (pageWidth > 769) {
 		$('.andro-column ul').css({maxHeight: listHeight + 'px' });
 	} else {
